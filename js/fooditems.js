@@ -98,5 +98,23 @@ const foodItem=[
         img:'img/images5.jpeg',
         quantity:1
     },
+    {
+        id:12,
+        name:'Supreme',
+        category:'toppings',
+        rating:4.3,
+        price:6.5,
+        img:'img/images1.jpeg',
+        quantity:1
+    },
+     {
+        id:13,
+        name:'Cheese',
+        category:'toppings',
+        rating:4.3,
+         price:7.4,
+         img:'img/images3.jpeg',
+         quantity:1
+    },
 ]
     export { foodItem };
