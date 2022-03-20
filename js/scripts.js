@@ -289,7 +289,7 @@ function cartItems(){
       totalAmount();
       cartItems();
   }
-  git add var flag= false;
+      var flag= false;
   function decrementItem(){
       let itemToDec= this.parentNode.previousSibling.innerText;
       let decObj= cartData.find(element=> element.name== itemToDec);
