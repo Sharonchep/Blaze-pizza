@@ -71,5 +71,32 @@ const foodItem=[
         img:'img/image7.jpeg',
         quantity:1
     },
+    {
+        id:9,
+        name:'Gluten-Free large',
+        category:'glutenfree',
+        rating:4.3,
+        price:8.9,
+        img:'img/image7.jpeg',
+        quantity:1
+    },
+    {
+        id:10,
+        name:'Pepperoni',
+        category:'toppings',
+        rating:4.3,
+        price:4.5,
+        img:'img/images4.jpeg',
+        quantity:1
+    },
+    {
+        id:11,
+        name:'Meatlovers',
+        category:'toppings',
+        rating:4.3,
+        price:5.6,
+        img:'img/images5.jpeg',
+        quantity:1
+    },
 ]
     export { foodItem };
