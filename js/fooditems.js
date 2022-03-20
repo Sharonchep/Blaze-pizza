@@ -44,5 +44,32 @@ const foodItem=[
         img:'img/pepperoni.jpg',
         quantity:1
     },
+    {
+        id:6,
+        name:'Stuffed large',
+        category:'stuffed',
+        rating:4.3,
+        price:8.9,
+        img:'img/pepperoni.jpg',
+        quantity:1
+    },
+    {
+        id:7,
+        name:'Gluten-Free small',
+        category:'glutenfree',
+        rating:4.3,
+        price:7.8,
+        img:'img/image7.jpeg',
+        quantity:1
+    },
+    {
+        id:8,
+        name:'Gluten-Free medium',
+        category:'glutenfree',
+        rating:4.3,
+        price:8.3,
+        img:'img/image7.jpeg',
+        quantity:1
+    },
 ]
     export { foodItem };
