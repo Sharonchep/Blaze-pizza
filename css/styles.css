@@ -168,3 +168,74 @@ body{
     transition: 0.5s all ease-in-out;
 
 }
+#item-card:hover img{
+    transform: scale(1.1);
+}
+#item-name{
+    margin: 3px 0;
+    color: darkslategrey;
+    font-weight: 500;
+    font-size: 18px;
+}
+#item-price{
+    margin: 0;
+    color: rgb(13, 13, 56);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#cart{
+    background:whitesmoke;
+    padding-right: 30px;
+    overflow-y: scroll;
+}
+.taste-header{
+    padding-top: 40px;
+    position: sticky;
+    padding-bottom: 10px;
+    top: 0;
+    background: whitesmoke;
+}
+.item-menu{
+    margin: 0;
+    font-size: 30px;
+    margin-top: 30px;
+    color: rgb(125, 238, 125);
+    background:whitesmoke;
+    font-family: 'Aclonica', sans-serif; 
+
+}
+.border{
+    width: 80px;
+    height: 4px;
+    margin: 3px 0;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    background: coral;
+}
+.list-card{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition:0.3s all ease-in-out;
+}
+.list-card:hover{
+    background: rgb(231, 160, 193);
+}
+.list-card:hover img{
+    transition: 0.5s all ease-in-out;
+    transform: scale(1.1);
+}
+.list-card img{
+    width: 50px;
+    height: 50px;
+}
+.list-name{
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(121, 189, 189);
+}
