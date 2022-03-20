@@ -341,6 +341,24 @@ function cartToggle(){
        document.getElementById('checkout').classList.toggle('cart-toogle');
        flag= true;
   }
+  else{
+    alert("Currently no item in cart");
+}
+}
+document.getElementById('add-address').addEventListener('click',addAddress);
+//    document.getElementById('m-add-address').addEventListener('click',addAddress);
+
+function addAddress(){
+var address = prompt('Enter your Location');
+if (address){
+    document.getElementById('add-address').innerText= ' ' + address;
+}
+else {
+    document.getElementById('add-address').innerText= 'Your address ';
+    alert('your order will be delivered to your location')
+}
+
+}
 
 
 
