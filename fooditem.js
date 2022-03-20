@@ -5,7 +5,7 @@ const foodItem=[
         category:'cripsy',
         rating:4.3,
         price:7.5,
-        img:'img/image6.jpeg',
+        img:'image6.jpeg',
         quantity:1
     },
     {
@@ -107,14 +107,16 @@ const foodItem=[
         img:'img/images1.jpeg',
         quantity:1
     },
-     {
+    {
         id:13,
         name:'Cheese',
         category:'toppings',
         rating:4.3,
-         price:7.4,
-         img:'img/images3.jpeg',
-         quantity:1
+        price:7.4,
+        img:'img/images3.jpeg',
+        quantity:1
     },
+   
 ]
-    export { foodItem };
+export { foodItem };
+
