@@ -289,5 +289,22 @@ function cartItems(){
       totalAmount();
       cartItems();
   }
+  git add var flag= false;
+  function decrementItem(){
+      let itemToDec= this.parentNode.previousSibling.innerText;
+      let decObj= cartData.find(element=> element.name== itemToDec);
+      let ind=cartData.indexOf(decObj);
+      if(decObj.quantity > 1){
+          currPrice= (decObj.price*decObj.quantity - decObj.price*(decObj.quantity-1))/(decObj.quantity);
+          decObj.quantity-=1;
+          decObj.price= currPrice*decObj.quantity;
+      }
+      else {
+          document.getElementById(decObj.id).classList.remove('toggle-heart');
+          cartData.splice(ind,1);
+          document.getElementById('cart-plus').innerHTML=''+ cartData.length +'Items';
+          // document.getElementById('m-cart-plus').innerHTML=''+ cartData.length;
+
+
 
 
