@@ -196,3 +196,34 @@ function categoryLists(){
      //    document.querySelector('.category-header').appendChild(cloneListCard);
     })
 }
+
+categoryLists();
+    
+
+   document.querySelectorAll('.add-to-cart').forEach(item=> {
+        item.addEventListener('click',addToCart);
+})
+ 
+var cartData = [];
+
+function addToCart(){
+    console.log(this.parentNode.nextSibling.nextSibling);
+    var itemToAdd= this.parentNode.nextSibling.nextSibling.innerText;
+    var itemObj= foodItem.find(element=>element.name==itemToAdd);
+
+    console.log(itemObj);
+
+    var index= cartData.indexOf(itemObj);
+    if(index=== -1){
+        document.getElementById(itemObj.id).classList.add('toggle-heart');
+        cartData= [...cartData,itemObj];
+        console.log(cartData);
+    }
+    else if(index > -1){
+        alert("Added to cart");
+    }
+    document.getElementById('cart-plus').innerText=' ' +cartData.length + ' Items';
+    // document.getElementById('m-cart-plus').innerText= ' ' +cartData.length;
+    totalAmount();
+    cartItems();
+}
