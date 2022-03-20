@@ -274,4 +274,20 @@ function cartItems(){
           item.addEventListener('click',decrementItem);
       })
   }
+  var currPrice= 0;
+
+  function incrementItem(){
+      let itemToInc= this.parentNode.previousSibling.innerText;
+      console.log(itemToInc);
+
+      var incObj= cartData.find(element=>element.name= itemToInc);
+      incObj.quantity+= 1;
+
+      currPrice= (incObj.price*incObj.quantity - incObj.price*(incObj.quantity-1))/(incObj.quantity-1);
+
+      incObj.price= currPrice*incObj.quantity;
+      totalAmount();
+      cartItems();
+  }
+
 
