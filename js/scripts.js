@@ -251,3 +251,18 @@ function cartItems(){
       var btn2= document.createElement('button');
       btn2.setAttribute('class','increase-item');
       btn2.innerText= '+';
+
+      rowData3.appendChild(btn1);
+            rowData3.appendChild(span);
+            rowData3.appendChild(btn2);
+
+            var  rowData4= document.createElement('td');
+            rowData4.innerText= item.price;
+
+            tableRow.appendChild(rowData1);
+            tableRow.appendChild(rowData2);
+            tableRow.appendChild(rowData3);
+            tableRow.appendChild(rowData4);
+
+            tableBody.appendChild(tableRow);
+        })  
