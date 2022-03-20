@@ -318,6 +318,29 @@ function cartItems(){
     totalAmount();
     cartItems();
 }
+function totalAmount(){
+  var sum=0;
+  cartData.map(item=>{
+      sum+= item.price;
+  })
+  document.getElementById('total-item').innerText='Total Item:'+ cartData.length;
+  document.getElementById('total-price').innerText='Total Price: $'+ sum; 
+  document.getElementById('m-total-amount').innerText='Total price: $' + sum;
+
+}
+document.getElementById('cart-plus').addEventListener('click',cartToggle);
+// document.getElementById('m-cart-plus').addEventListener('click',cartToggle);
+
+function cartToggle(){
+  if(cartData.length > 0){
+      document.getElementById('food-items').classList.toggle('food-items');
+      document.getElementById('category-list').classList.toggle('food-items'); 
+      // document.getElementById('m-cart-plus').classList.toggle('m-cart-toogle');
+       document.getElementById('cart-page').classList.toggle('cart-toogle'); 
+      //  document.getElementById('category-header').classList.toggle('toggle-category'); 
+       document.getElementById('checkout').classList.toggle('cart-toogle');
+       flag= true;
+  }
 
 
 
