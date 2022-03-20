@@ -304,7 +304,20 @@ function cartItems(){
           cartData.splice(ind,1);
           document.getElementById('cart-plus').innerHTML=''+ cartData.length +'Items';
           // document.getElementById('m-cart-plus').innerHTML=''+ cartData.length;
-
+          if (cartData.length < 1 && flag){ 
+            document.getElementById('food-items').classList.toggle('food-items');
+            document.getElementById('category-list').classList.toggle('food-items'); 
+            // document.getElementById('m-cart-plus').classList.toggle('m-cart-toogle');
+             document.getElementById('cart-page').classList.toggle('cart-toogle'); 
+            //  document.getElementById('category-header').classList.toggle('toggle-category'); 
+             document.getElementById('checkout').classList.toggle('cart-toogle');
+             flag= false;
+             alert("Currently no item in cart");
+        }
+    } 
+    totalAmount();
+    cartItems();
+}
 
 
 
