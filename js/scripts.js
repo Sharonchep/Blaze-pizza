@@ -265,4 +265,13 @@ function cartItems(){
             tableRow.appendChild(rowData4);
 
             tableBody.appendChild(tableRow);
-        })  
+        })
+        
+        document.querySelectorAll('.increase-item').forEach(item=> {
+          item.addEventListener('click',incrementItem);
+      })
+      document.querySelectorAll('.decrease-item').forEach(item=> { 
+          item.addEventListener('click',decrementItem);
+      })
+  }
+
