@@ -227,3 +227,27 @@ function addToCart(){
     totalAmount();
     cartItems();
 }
+function cartItems(){
+  var tableBody= document.getElementById('table-body');
+  tableBody.innerHTML= '';
+
+  cartData.map(item=> {
+      var tableRow= document.createElement('tr');
+
+      var rowData1= document.createElement('td');
+      var img= document.createElement('img');
+      img.src= item.img;
+      rowData1.appendChild(img);
+
+      var rowData2= document.createElement('td');
+      rowData2.innerText= item.name;
+      
+      var rowData3= document.createElement('td');
+      var btn1= document.createElement('button');
+      btn1.setAttribute('class','decrease-item');
+      btn1.innerHTML= '-';
+      var span= document.createElement('span');
+      span.innerText= item.quantity;
+      var btn2= document.createElement('button');
+      btn2.setAttribute('class','increase-item');
+      btn2.innerText= '+';
