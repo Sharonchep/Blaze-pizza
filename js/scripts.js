@@ -169,3 +169,30 @@ function displayItems (){
 }
 displayItems();
 
+const categoryListData= [...new Map(foodItem.map(item=>[item['category'],item])).values()];
+console.log(categoryListData);
+
+function categoryLists(){
+    var categoryList= document.getElementById('category-list');
+
+    categoryListData.map(item => {
+        var listCard= document.createElement('div');
+        listCard.setAttribute('class','list-card');
+
+        var listImg= document.createElement('img');
+        listImg.src= item.img;
+
+        var listName= document.createElement('a');
+        listName.setAttribute('class','list-name');
+        listName.innerText= item.category;
+        listName.setAttribute('href','#'+item.category);
+
+
+        listCard.appendChild(listImg);
+        listCard.appendChild(listName);
+
+        var cloneListCard= listCard.cloneNode(true);
+        categoryList.appendChild(listCard);
+     //    document.querySelector('.category-header').appendChild(cloneListCard);
+    })
+}
