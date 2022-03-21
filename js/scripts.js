@@ -167,7 +167,7 @@ function displayItems (){
         itemCard.appendChild(itemName);
         itemCard.appendChild(itemPrice);
     
-        toppings.appendChild(itemCard);
+        toppinggs.appendChild(itemCard);
     })
 }
 displayItems();
@@ -196,10 +196,8 @@ displayItems();
 
                var cloneListCard= listCard.cloneNode(true);
                categoryList.appendChild(listCard);
-            //    document.querySelector('.category-header').appendChild(cloneListCard);
            })
        }
-
     categoryLists();
     
 
@@ -226,7 +224,6 @@ displayItems();
             alert("Added to cart");
         }
         document.getElementById('cart-plus').innerText=' ' +cartData.length + ' Items';
-        // document.getElementById('m-cart-plus').innerText= ' ' +cartData.length;
         totalAmount();
         cartItems();
     }
@@ -267,7 +264,6 @@ displayItems();
             tableRow.appendChild(rowData2);
             tableRow.appendChild(rowData3);
             tableRow.appendChild(rowData4);
-
             tableBody.appendChild(tableRow);
         })  
         document.querySelectorAll('.increase-item').forEach(item=> {
@@ -277,14 +273,13 @@ displayItems();
             item.addEventListener('click',decrementItem);
         })
     }
-
     var currPrice= 0;
 
     function incrementItem(){
         let itemToInc= this.parentNode.previousSibling.innerText;
         console.log(itemToInc);
 
-        var incObj= cartData.find(element=>element.name= itemToInc);
+        var incObj= cartData.find(element=>element.name== itemToInc);
         incObj.quantity+= 1;
 
         currPrice= (incObj.price*incObj.quantity - incObj.price*(incObj.quantity-1))/(incObj.quantity-1);
@@ -308,14 +303,11 @@ displayItems();
             document.getElementById(decObj.id).classList.remove('toggle-heart');
             cartData.splice(ind,1);
             document.getElementById('cart-plus').innerHTML=''+ cartData.length +'Items';
-            // document.getElementById('m-cart-plus').innerHTML=''+ cartData.length;
 
         if (cartData.length < 1 && flag){ 
             document.getElementById('food-items').classList.toggle('food-items');
             document.getElementById('category-list').classList.toggle('food-items'); 
-            // document.getElementById('m-cart-plus').classList.toggle('m-cart-toogle');
              document.getElementById('cart-page').classList.toggle('cart-toogle'); 
-            //  document.getElementById('category-header').classList.toggle('toggle-category'); 
              document.getElementById('checkout').classList.toggle('cart-toogle');
              flag= false;
              alert("Currently no item in cart");
@@ -329,21 +321,17 @@ function totalAmount(){
     cartData.map(item=>{
         sum+= item.price;
     })
+    
     document.getElementById('total-item').innerText='Total Item:'+ cartData.length;
     document.getElementById('total-price').innerText='Total Price: $'+ sum; 
-    document.getElementById('m-total-amount').innerText='Total price: $' + sum;
 
 }
 document.getElementById('cart-plus').addEventListener('click',cartToggle);
-// document.getElementById('m-cart-plus').addEventListener('click',cartToggle);
-
 function cartToggle(){
     if(cartData.length > 0){
         document.getElementById('food-items').classList.toggle('food-items');
         document.getElementById('category-list').classList.toggle('food-items'); 
-        // document.getElementById('m-cart-plus').classList.toggle('m-cart-toogle');
-         document.getElementById('cart-page').classList.toggle('cart-toogle'); 
-        //  document.getElementById('category-header').classList.toggle('toggle-category'); 
+         document.getElementById('cart-page').classList.toggle('cart-toogle');  
          document.getElementById('checkout').classList.toggle('cart-toogle');
          flag= true;
     }
@@ -352,16 +340,17 @@ function cartToggle(){
     }
 }
    document.getElementById('add-address').addEventListener('click',addAddress);
-//    document.getElementById('m-add-address').addEventListener('click',addAddress);
 
-function addAddress(){
+    function addAddress(){
     var address = prompt('Enter your Location');
     if (address){
         document.getElementById('add-address').innerText= ' ' + address;
+        confirm("Delivery price is $2")
+        alert("Your order will be delivered to your location")
     }
     else {
         document.getElementById('add-address').innerText= 'Your address ';
-        alert('your order will be delivered to your location')
+        alert('Order is received');
     }
 
 }

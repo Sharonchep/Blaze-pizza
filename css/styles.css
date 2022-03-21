@@ -22,7 +22,6 @@ body{
     height: 100%;
     overflow: hidden;
 }
-/* menu item */
 #menu{
     background:white;
 }
@@ -49,7 +48,6 @@ body{
 #menu-item a:hover{
     background:pink;
 }
-/* fooooooood */
 #food-container{
     background:whitesmoke;
     overflow: scroll;
@@ -94,7 +92,6 @@ body{
     padding: 8px 10px;
     color: #f9004d;
     cursor: pointer;
-    /* font-family: 'Nunito', sans-serif; */
     border-radius: 30px;
 }
 .util i:active,.user i:active{
@@ -203,7 +200,6 @@ body{
     color: rgb(125, 238, 125);
     background:whitesmoke;
     font-family: 'Aclonica', sans-serif; 
-
 }
 .border{
     width: 80px;
@@ -239,12 +235,6 @@ body{
     text-transform: capitalize;
     color: rgb(121, 189, 189);
 }
- /* .cart-toggle {
-    display: none;
-}   */
- /* #category-list{
-    display: none;
-}  */
 .food-items{
     display: none;
 }  
@@ -305,7 +295,7 @@ body{
     border-radius: 5px;
     background: rgb(218, 212, 212);
     margin: 40px auto;
-    padding: 10px 20px;
+    padding: 50px 20px;
 }
 #checkout p{
     margin: 10px 0;
@@ -314,6 +304,7 @@ body{
 #total-price,#total-item{
     font-size: 20px;
     color: indianred;
+    padding: 10px;
 }
 .cart-btn{
     outline: none;

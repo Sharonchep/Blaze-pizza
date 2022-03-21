@@ -4,8 +4,8 @@ const foodItem=[
         name:'Cripsy small',
         category:'cripsy',
         rating:4.3,
-        price:7.5,
-        img:'image6.jpeg',
+        price:7,
+        img:'img/image6.jpeg',
         quantity:1
     },
     {
@@ -13,7 +13,7 @@ const foodItem=[
         name:'Cripsy medium',
         category:'cripsy',
         rating:4.3,
-        price:8.6,
+        price:8,
         img:'img/image6.jpeg',
         quantity:1
     },
@@ -22,7 +22,7 @@ const foodItem=[
         name:'Cripsy large',
         category:'cripsy',
         rating:4-3,
-        price:8.8,
+        price:8.5,
         img:'img/image6.jpeg',
         quantity:1
     },
@@ -40,7 +40,7 @@ const foodItem=[
         name:'Stuffed medium',
         category:'stuffed',
         rating:4.3,
-        price:8.6,
+        price:8.5,
         img:'img/pepperoni.jpg',
         quantity:1
     },
@@ -49,7 +49,7 @@ const foodItem=[
         name:'Stuffed large',
         category:'stuffed',
         rating:4.3,
-        price:8.9,
+        price:9,
         img:'img/pepperoni.jpg',
         quantity:1
     },
@@ -58,7 +58,7 @@ const foodItem=[
         name:'Gluten-Free small',
         category:'glutenfree',
         rating:4.3,
-        price:7.8,
+        price:7,
         img:'img/image7.jpeg',
         quantity:1
     },
@@ -67,7 +67,7 @@ const foodItem=[
         name:'Gluten-Free medium',
         category:'glutenfree',
         rating:4.3,
-        price:8.3,
+        price:8,
         img:'img/image7.jpeg',
         quantity:1
     },
@@ -76,7 +76,7 @@ const foodItem=[
         name:'Gluten-Free large',
         category:'glutenfree',
         rating:4.3,
-        price:8.9,
+        price:9,
         img:'img/image7.jpeg',
         quantity:1
     },
@@ -85,7 +85,7 @@ const foodItem=[
         name:'Pepperoni',
         category:'toppings',
         rating:4.3,
-        price:4.5,
+        price:5,
         img:'img/images4.jpeg',
         quantity:1
     },
@@ -94,7 +94,7 @@ const foodItem=[
         name:'Meatlovers',
         category:'toppings',
         rating:4.3,
-        price:5.6,
+        price:6,
         img:'img/images5.jpeg',
         quantity:1
     },
@@ -112,7 +112,7 @@ const foodItem=[
         name:'Cheese',
         category:'toppings',
         rating:4.3,
-        price:7.4,
+        price:7,
         img:'img/images3.jpeg',
         quantity:1
     },
